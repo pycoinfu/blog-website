@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Tilt+Neon&display=swap");
+* {
+  margin: 0;
+}
+
+:root {
+  --color-bg: rgb(18, 18, 18);
+  --color-nav: rgb(32, 32, 32);
+  --color-text: rgb(243, 243, 243);
+  --color-text-dark: rgb(193, 193, 193);
+  --color-post-border: rgb(94, 94, 94);
+  --color-post-bg: rgb(33, 33, 33);
+  --color-post-bg-hover: rgb(49, 49, 49);
+  --color-footer-bg: rgb(0, 0, 0);
+}
+
+body {
+  font-family: "Montserrat", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.navbar {
+  background: var(--color-nav);
+  padding: 1.5rem;
+  display: flex;
+  font-size: 1.5rem;
+}
+.navbar .logo {
+  margin: 0 2rem;
+  flex-basis: 40%;
+}
+.navbar nav {
+  flex-basis: 60%;
+  display: flex;
+  justify-content: space-around;
+}
+.navbar .nav-btn a {
+  text-decoration: none;
+  color: var(--color-text);
+  transition: 0.5s;
+}
+.navbar .nav-btn a:hover {
+  color: var(--color-text-dark);
+}
+
+main {
+  padding: 1rem;
+  padding-bottom: 3rem;
+  background: var(--color-bg);
+  color: var(--color-text);
+  display: flex;
+}
+main .blog-posts {
+  margin-right: 1rem;
+  flex-basis: 70%;
+}
+main .blog-posts .blog-post {
+  border-radius: 0.5rem;
+  background: var(--color-post-bg);
+  padding: 0.7rem;
+  margin-bottom: 1.7rem;
+  transition: 0.5s;
+}
+main .blog-posts .blog-post h1 {
+  position: sticky;
+}
+main .blog-posts .blog-post p.time {
+  margin: 0.5rem 0;
+  color: var(--color-text-dark);
+}
+main .blog-posts .blog-post .blog-content {
+  border-top: 1px solid var(--color-post-border);
+  display: flex;
+  flex-direction: row-reverse;
+}
+main .blog-posts .blog-post .blog-content img.post-thumb {
+  margin-top: 0.1rem;
+  width: 15%;
+  height: 15%;
+}
+main .blog-posts .blog-post .blog-content p.blog-text {
+  margin: 0.4rem 1.5rem;
+}
+main .blog-posts .blog-post:hover {
+  background: var(--color-post-bg-hover);
+}
+main .side-bar {
+  flex-basis: 30%;
+}
+main .side-bar .side-bar-post {
+  border-radius: 0.5rem;
+  background: var(--color-post-bg);
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  transition: 0.5s;
+}
+main .side-bar .side-bar-post h2 {
+  color: var(--color-text-dark);
+}
+main .side-bar .side-bar-post p.side-bar-post-text {
+  color: var(--color-text-dark);
+  border-top: 1px solid var(--color-post-border);
+  padding-top: 0.4rem;
+}
+main .side-bar .side-bar-post:hover {
+  background: var(--color-post-bg-hover);
+}
+
+footer {
+  background: var(--color-footer-bg);
+  color: var(--color-text-dark);
+  text-align: center;
+  padding: 2.2rem;
+}
+
+@media screen and (max-width: 730px) {
+  .logo {
+    display: none;
+  }
+  nav {
+    flex-basis: 100% !important;
+  }
+  .side-bar {
+    display: none;
+  }
+  .blog-posts {
+    flex-basis: 100% !important;
+  }
+}/*# sourceMappingURL=style.css.map */
